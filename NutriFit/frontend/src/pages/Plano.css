@@ -1,0 +1,246 @@
+/* Plano.css - Versão aprimorada com efeitos extras */
+
+.plano-container {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #f5f7fa;
+  overflow-x: hidden;
+}
+
+.plano-container h2 {
+  color: #2c3e50;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Efeito de gradiente no título */
+.plano-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  border-radius: 2px;
+}
+
+.dados-usuario {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  max-width: 100%;
+}
+
+.dados-usuario p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  color: #555;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dados-usuario strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.cardapio {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.refeicao {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease; /* Preparação para o hover */
+}
+
+.refeicao:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: #f8fafc;
+}
+
+.refeicao h3 {
+  color: green;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.refeicao ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.refeicao li {
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.refeicao li:last-child {
+  border-bottom: none;
+}
+
+.totais-refeicao {
+  display: flex;
+  justify-content: space-around;
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 12px;
+  font-weight: 600;
+  color: #2c3e50;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.refeicao:hover .totais-refeicao {
+  background-color: #dff0ff;
+}
+
+.totais-refeicao span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.85rem;
+  min-width: 60px;
+}
+
+/* Link do logo com hover */
+.logo-link {
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.logo-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Botão voltar fixo */
+.btn-voltar {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #3498db;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.5);
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+  user-select: none;
+}
+.btn-voltar:hover {
+  background-color: #2c80c9;
+  box-shadow: 0 6px 18px rgba(40, 120, 200, 0.7);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .plano-container {
+    padding: 15px;
+  }
+  
+  .dados-usuario {
+    grid-template-columns: 1fr;
+  }
+  
+  .refeicao li {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .totais-refeicao {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .totais-refeicao span {
+    flex: 1 0 calc(50% - 8px);
+  }
+}
+
+/* Efeitos para telas grandes */
+@media (min-width: 1200px) {
+  .plano-container {
+    padding: 20px 5%;
+  }
+  
+  .cardapio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .refeicao {
+    height: fit-content;
+  }
+}
+
+/* Barra de rolagem personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Loading e erro */
+.loading, .error {
+  max-width: 400px;
+  margin: 100px auto;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #555;
+  font-weight: 600;
+}
+.error {
+  color: #e74c3c;
+}

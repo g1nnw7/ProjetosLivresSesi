@@ -1,0 +1,23 @@
+:root{
+  --cor-1: #10451D;
+  --cor-2: #155D27;
+  --cor-3: #1A7431;
+  --cor-4: #208B3A;
+  --cor-5: #25A244;
+  --cor-6: #2DC653;
+  --cor-7: #4AD66D;
+  --cor-8: #6EDE8A;
+  --cor-9: #92E6A7;
+  --cor-10:#B7EFC5;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root, body, html{
+  min-height: 100vh;
+  /* background-color: aqua; */
+}

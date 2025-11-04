@@ -1,0 +1,55 @@
+:root {
+  --background-blur: 8px; 
+}
+
+.home-container {
+  position: relative;
+  width: 100%;
+  /* height: 100vh; */
+  min-height: 100vh;
+  overflow-y: auto; /* Permite rolagem vertical */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.background-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(var(--background-blur));
+  z-index: -1;
+}
+
+.logo-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.menu-button:hover {
+  transform: scale(1.05);
+  background-color: #d3f6d1;
+}

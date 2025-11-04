@@ -1,0 +1,107 @@
+.container-geral {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #f2f9f2, #d1e7d1);
+}
+
+.div-esquerdaa {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F1F1F1;
+}
+
+.div-direitaa {
+  position: relative;
+  height: 100vh; /* Altura total da janela, como na Cascade */
+  width: 50vw;
+  background-image: url("/img/cadastro.jpg");
+  background-size: cover;
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita repetição */
+}
+
+/* Caixa central de cadastro */
+.caixote-cadastro {
+  width: 350px;
+  padding: 40px 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.caixote-cadastro h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Inputs */
+.cadastro-email,
+.cadastro-usuario,
+.cadastro-senha {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.cadastro-email:focus,
+.cadastro-usuario:focus,
+.cadastro-senha:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 4px rgba(76, 175, 80, 0.3);
+}
+
+/* Botão cadastrar */
+.botao-cadastro {
+  width: 100%;
+  padding: 12px;
+  margin-top: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.botao-cadastro:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.botao-cadastro:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Link para login */
+.senha-esquecida2 {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.senha-esquecida2 a {
+  color: #4CAF50;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.senha-esquecida2 a:hover {
+  text-decoration: underline;
+}
